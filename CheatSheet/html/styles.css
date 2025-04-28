@@ -1,0 +1,120 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Define color variables */
+:root {
+  --body-color: #f5f5f5;
+  --color-white: #ffffff;
+  --text-color-second: #333333;
+  --text-color-third: #666666;
+  --first-color: #4a90e2;
+  --first-color-hover: #357ab7;
+  --second-color: #50e3c2;
+  --third-color: #f5a623;
+  --first-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--body-color);
+  color: var(--text-color-second);
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: var(--first-color);
+  color: var(--color-white);
+}
+
+/* Navigation styles */
+nav {
+  background: var(--color-white);
+  padding: 1rem;
+  box-shadow: 0 2px 5px var(--first-shadow-color);
+}
+
+/* Navigation list (flexbox) */
+#navList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* Navigation list items */
+#navList li {
+  margin: 0.5rem;
+}
+
+/* Navigation links */
+#navList a {
+  text-decoration: none;
+  color: var(--text-color-second);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+/* Link hover effect */
+#navList a:hover {
+  color: var(--first-color-hover);
+}
+
+/* Main content padding */
+main {
+  padding: 2rem;
+}
+
+/* Each section margin */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Section titles */
+h2 {
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+/* List styles */
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Inline code styling */
+code {
+  background: #e0e0e0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--first-color);
+  color: var(--color-white);
+  margin-top: 2rem;
+}
+
+/* Active navigation link styling */
+.active {
+  color: var(--second-color);
+  border-bottom: 2px solid var(--second-color);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Cheatsheet</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>JS Cheatsheet</h1>
+    <p>Quick overview and reference</p>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul id="navList">
+      <!-- Navigation Links -->
+      <li><a href="#mobileMenu">Mobile Navigation Menu</a></li>
+      <li><a href="#headerShadow">Header Shadow on Scroll</a></li>
+      <li><a href="#typingEffect">Typing Effect (Typed.js)</a></li>
+      <li><a href="#scrollReveal">Scroll Reveal Animations</a></li>
+      <li><a href="#activeLink">Change Active Navigation Link</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Sections -->
+  <main>
+
+    <!-- I. Mobile Navigation Menu Section -->
+    <section id="mobileMenu">
+      <h2>I. Mobile Navigation Menu</h2>
+      <ul>
+        <li><code>function myMenuFunction()</code>: Controls the mobile navigation menu behavior.</li>
+        <li><code>var menuBtn = document.getElementById("myNavMenu");</code>: Gets the menu element by ID.</li>
+        <li><code>if (menuBtn.className === "nav-menu")</code>: Checks if menu is in its default (likely hidden) state.</li>
+        <li><code>menuBtn.className += " responsive";</code>: Appends the <code>responsive</code> class to show the menu.</li>
+        <li><code>else</code>: Otherwise, if already responsive...</li>
+        <li><code>menuBtn.className = "nav-menu";</code>: Resets the class back to hidden/default.</li>
+      </ul>
+    </section>
+
+    <!-- II. Header Shadow on Scroll Section -->
+    <section id="headerShadow">
+      <h2>II. Header Shadow on Scroll</h2>
+      <ul>
+        <li><code>window.onscroll = function() { headerShadow() };</code>: Executes <code>headerShadow()</code> when the user scrolls.</li>
+        <li><code>function headerShadow()</code>: Adjusts the header's shadow and height on scroll.</li>
+        <li><code>const navHeader = document.getElementById("header");</code>: Retrieves the header element.</li>
+        <li><code>if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)</code>: Checks if scrolled more than 50px.</li>
+        <li>
+          If true:
+          <ul>
+            <li><code>navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";</code>: Adds a subtle shadow.</li>
+            <li><code>navHeader.style.height = "70px";</code>: Reduces header height.</li>
+            <li><code>navHeader.style.lineHeight = "70px";</code>: Adjusts line height.</li>
+          </ul>
+        </li>
+        <li>
+          Else:
+          <ul>
+            <li><code>navHeader.style.boxShadow = "none";</code>: Removes shadow.</li>
+            <li><code>navHeader.style.height = "90px";</code>: Resets header height.</li>
+            <li><code>navHeader.style.lineHeight = "90px";</code>: Resets line height.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- III. Typing Effect (Typed.js) Section -->
+    <section id="typingEffect">
+      <h2>III. Typing Effect (Typed.js)</h2>
+      <ul>
+        <li><code>var typingEffect = new Typed(".typedText", { ... });</code>: Uses Typed.js to animate text.</li>
+        <li><code>".typedText"</code>: Selector for the element where text is animated.</li>
+        <li>The options inside the object include:</li>
+        <ul>
+          <li><code>strings: ["Designers", "Renovators", "Craftsmen", "Builders", "Experts", "EMR"]</code>: List of words to type out.</li>
+          <li><code>loop: true</code>: Continuously loops the animation.</li>
+          <li><code>typeSpeed: 100</code>: Typing speed in milliseconds per character.</li>
+          <li><code>backSpeed: 80</code>: Backspace speed in milliseconds per character.</li>
+          <li><code>backDelay: 2000</code>: Delay before backspacing.</li>
+        </ul>
+      </ul>
+    </section>
+
+    <!-- IV. Scroll Reveal Animations Section -->
+    <section id="scrollReveal">
+      <h2>IV. Scroll Reveal Animations (ScrollReveal.js)</h2>
+      <ul>
+        <li><code>const sr = ScrollReveal({ ... });</code>: Initializes ScrollReveal with default options:</li>
+        <ul>
+          <li><code>origin: 'top'</code>: Elements come from the top.</li>
+          <li><code>distance: '80px'</code>: Travel distance during reveal.</li>
+          <li><code>duration: 2000</code>: Animation duration in milliseconds.</li>
+          <li><code>reset: true</code>: Re-animates each time elements enter the viewport.</li>
+        </ul>
+        <li><code>sr.reveal('.featured-text-card', {});</code>: Reveals the element with <code>featured-text-card</code> using default settings.</li>
+        <li><code>sr.reveal('.featured-name', { delay: 100 });</code>: Reveals <code>featured-name</code> with a delay of 100ms.</li>
+        <li><code>sr.reveal('.project-box', { interval: 200 });</code>: Staggers animation for each <code>project-box</code> by 200ms intervals.</li>
+        <li><code>const srLeft = ScrollReveal({ origin: 'left', ... });</code>: New instance for left-origin animations.</li>
+        <li><code>srLeft.reveal('.about-info', { delay: 100 });</code> and <code>srLeft.reveal('.contact-info', { delay: 100 });</code>: Reveal elements from left.</li>
+        <li><code>const srRight = ScrollReveal({ origin: 'right', ... });</code>: New instance for right-origin animations.</li>
+        <li><code>srRight.reveal('.skills-box', { delay: 100 });</code> and <code>srRight.reveal('.form-control', { delay: 100 });</code>: Reveal elements from right.</li>
+      </ul>
+    </section>
+
+    <!-- V. Change Active Navigation Link Section -->
+    <section id="activeLink">
+      <h2>V. Change Active Navigation Link</h2>
+      <ul>
+        <li><code>const sections = document.querySelectorAll('section[id]');</code>: Selects all sections with an ID.</li>
+        <li>
+          <code>function scrollActive()</code>: Determines which nav link is highlighted based on scroll.
+          <ul>
+            <li><code>const scrollY = window.scrollY;</code>: Gets current scroll position.</li>
+            <li>
+              <code>sections.forEach(current =&gt; { ... });</code>: Loops through sections to compute:
+              <ul>
+                <li><code>sectionHeight</code>: Height of the current section.</li>
+                <li><code>sectionTop = current.offsetTop - 50;</code>: Top offset adjusted by 50px.</li>
+                <li><code>sectionId = current.getAttribute('id');</code>: Section ID.</li>
+                <li>If <code>scrollY</code> falls within the section bounds, the corresponding nav link gets <code>active-link</code> class; otherwise, it is removed.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><code>window.addEventListener('scroll', scrollActive);</code>: Listens for scroll events to update the active navigation.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer Text -->
+  <footer>
+    <p>&copy; EMR JS Cheatsheet Page</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

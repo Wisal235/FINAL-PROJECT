@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Cheatsheet</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>CSS Cheatsheet</h1>
+    <p>Quick overview and reference</p>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul id="navList">
+      <!-- Navigation Links -->
+      <li><a href="#basics">Basics</a></li>
+      <li><a href="#reusable">Reusable Styles</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#featured">Featured Section</a></li>
+      <li><a href="#about">About Section</a></li>
+      <li><a href="#projects">Projects Section</a></li>
+      <li><a href="#contact">Contact Section</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="#media">Media Queries</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Sections -->
+  <main>
+
+    <!-- Basics Section -->
+    <section id="basics">
+      <h2>I. Basics</h2>
+      <ul>
+        <li><code>@import url(...)</code>: Imports the Poppins font from Google Fonts.</li>
+        <li><code>:root</code>: Defines CSS variables for easy theming.</li>
+        <li><code>*</code>: Universal selector to reset margins and padding.</li>
+        <li><code>html</code>: Sets <code>scroll-behavior: smooth</code>.</li>
+        <li><code>::-webkit-scrollbar</code>: Styles scrollbars for WebKit browsers.</li>
+      </ul>
+    </section>
+
+    <!-- Reusable Styles Section -->
+    <section id="reusable">
+      <h2>II. Reusable Styles</h2>
+      <ul>
+        <li><code>.btn</code>: Button styles (padding, background, etc.).</li>
+        <li><code>.section, .row, .col</code>: Layout helpers (Flexbox).</li>
+        <li><code>.top-header</code>: Section headers styling.</li>
+      </ul>
+    </section>
+
+    <!-- Navigation Section -->
+    <section id="navigation">
+      <h2>III. Navigation (nav)</h2>
+      <ul>
+        <li><code>nav</code>: Main navbar styling.</li>
+        <li><code>.nav-logo, .nav-menu, .nav-link</code>: Logo and menu styling.</li>
+        <li><code>.active-link::after</code>: Indicator for active links.</li>
+      </ul>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured">
+      <h2>IV. Featured Section (featured-box)</h2>
+      <ul>
+        <li><code>.featured-box</code>: Layout for the main section.</li>
+        <li><code>.featured-text, .featured-name, .typedText</code>: Text styles.</li>
+        <li><code>.featured-image</code>: Styles the image and its animation.</li>
+      </ul>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>V. About Section</h2>
+      <ul>
+        <li><code>.about-info, .about-btn</code>: About box and button styles.</li>
+        <li><code>.skills-box, .skills-list</code>: Skills display.</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>VI. Projects Section</h2>
+      <ul>
+        <li><code>.project-container, .project-box</code>: Project display layout.</li>
+        <li><code>::after, :hover</code>: Hover effects.</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>VII. Contact Section</h2>
+      <ul>
+        <li><code>.contact-info, .form-control</code>: Contact form styles.</li>
+        <li><code>.form-inputs, .input-field</code>: Input fields and textarea.</li>
+      </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <h2>VIII. Footer</h2>
+      <ul>
+        <li><code>footer, .top-footer, .middle-footer, .bottom-footer</code>: Footer styles.</li>
+      </ul>
+    </section>
+
+    <!-- Media Queries Section -->
+    <section id="media">
+      <h2>IX. Media Queries</h2>
+      <ul>
+        <li><code>@media (max-width: 1024px)</code>: Tablet styles.</li>
+        <li><code>@media (max-width: 900px)</code>: Mobile styles.</li>
+        <li><code>@media (max-width: 540px)</code>: Small devices styles.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer Text -->
+  <footer>
+    <p>&copy; EMR CSS Cheatsheet Page</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
